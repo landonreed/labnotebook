@@ -43,3 +43,7 @@ pandoc:
 #    - mathml                                     # Use mathml for equations (Archival, HTML5/XML valid syntax)
 
 
+comments:
+  disqus:
+    short_name: cboettig 
+    api_key: BfVIWBQLHYNqfxKEtgM5reDiI22CX0gyy8QTUoHPfdWT1A927czech63JnM2gvIG  # This is the application's public key
