@@ -52,11 +52,21 @@ task :disquscomments do
 		else
 			ident = post_id
 		end
-	
+    
+    ## Use URL to match posts
+    puts "Initialize testing"
+    puts site['url']
+    puts post.data['path'].to_s + post.data['url'].to_s
+    ident = site['url'] + post.data['dir'].to_s + post.data['url'].to_s
+
+
 		siteid  = post_disqus_short_name || site_disqus_short_name
 		api_key = site['comments']['disqus']['api_key']
-	
-		uri = "http://disqus.com/api/3.0/threads/listPosts.json?forum=#{siteid}&thread:ident=#{ident}&api_key=#{api_key}&limit=100"
+
+    # Match posts by URL
+    uri = "http://disqus.com/api/3.0/threads/listPosts.json?forum=#%7Bsiteid%7D&thread:link=%23%7Bident%7D&api_key=%23%7Bapi_key%7D&limit=100"
+    # Match posts by key
+#		uri = "http://disqus.com/api/3.0/threads/listPosts.json?forum=#{siteid}&thread:ident=#{ident}&api_key=#{api_key}&limit=100"
 		url = URI.parse(uri)
 		http = Net::HTTP.new(url.host, url.port)
 		request = Net::HTTP::Get.new(url.request_uri)
