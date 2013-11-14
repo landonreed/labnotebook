@@ -18,13 +18,13 @@ gitstamps: yes
 title: Lab Notebook 
 tagline: Theoretical ecology and evolution
 author:
-  name: Carl Boettiger
-  givenName: Carl
-  familyName: Boettiger
-  twitter: cboettig
-  github: cboettig
-  mendeley: carl-boettiger
-url: http://carlboettiger.info
+  name: Landon redirects
+  givenName: Landon
+  familyName: Reed
+  twitter: eltiar
+  github: landonreed
+  mendeley: landon-reed
+url: http://landonreed.github.io/labnotebook
 repo: https://github.com/cboettig/labnotebook # used in linking history
 
 ## Google Analytics key (in _includes/analytics.html)
